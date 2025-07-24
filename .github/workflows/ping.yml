@@ -12,6 +12,6 @@ jobs:
       - name: Ping API every 30s
         run: |
           echo "Pinging Render API..."
-          curl -s https://your-render-api-url.com/ping
+          curl -s https://legalagi-deploy.onrender.com/health
           sleep 30
-          curl -s https://your-render-api-url.com/ping
+          curl -s https://legalagi-deploy.onrender.com/health
