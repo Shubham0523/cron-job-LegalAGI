@@ -1,0 +1,17 @@
+name: Keep Render API Awake
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Every 1 minute
+  workflow_dispatch:
+
+jobs:
+  ping-api:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping API every 30s
+        run: |
+          echo "Pinging Render API..."
+          curl -s https://your-render-api-url.com/ping
+          sleep 30
+          curl -s https://your-render-api-url.com/ping
